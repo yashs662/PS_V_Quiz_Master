@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale-1.0">
+   <meta name="viewport" content="width=device-width">
    <title>index</title>
    <link rel="stylesheet" type="text/css" href="../styles/moderator.css" />
    <link rel="stylesheet" type="text/css" href="../styles/navbar.css" />

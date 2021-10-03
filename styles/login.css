@@ -12,7 +12,11 @@ body {
 	width: 100%;
 	height:100%;
 	font-family: 'Open Sans', sans-serif;
-  background-color: #FFCC1B;
+  background-image:url('../media/bg.jpg');
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position:center;
+	background-color: #ffcc1b;
 }
 
 

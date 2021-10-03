@@ -5,13 +5,14 @@
   }
   html { width: 100%; min-height: 100%; }
   body {
-  justify-content: center;
-  align-items: center;
 	width: 100%;
 	height:100%;
 	font-family: 'Open Sans', sans-serif;
-	background-color: #ffcc1b
-	;
+    background-image:url('../media/bg.jpg');
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position:center;
+	background-color: #ffcc1b;
   }
   .hidden 
   {

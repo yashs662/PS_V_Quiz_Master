@@ -1,0 +1,117 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+  }
+  html { width: 100%; min-height: 100%; }
+  body {
+  justify-content: center;
+  align-items: center;
+	width: 100%;
+	height:100%;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #ffcc1b
+	;
+  }
+  .hidden 
+  {
+  display: none;
+  }
+  .show {
+	  display: inline;
+  }
+  .boxText{
+	background-size: 100%;
+	background-color: #4c6bb2;
+	border-radius: 20px ;
+	position:absolute;
+	top: 35%;
+	left: 48%;
+	transform: translate(-50%,-50%);
+	text-align:center;
+	font-family:"Open Sans",sans-serif;
+	font-size: 20px;
+	filter: drop-shadow(20px 20px 5px  #384140);
+	padding: 20px;
+	width:40%;
+	word-wrap: break-word;
+	margin-bottom: 60px ;
+	margin-top: 60px ;
+	color:#ffffff;
+  }
+
+  .submitButton{
+		width: 20%;
+		background-color: aqua;
+  }
+  .Image1{
+    margin-top: 3%;
+    width:100%;
+    height: 40%;
+    position: center;
+    
+}
+  
+  @media screen and (max-width:768px){
+	.boxText{
+	  background-size: 100%;
+	  background-color: #4c6bb2;
+	  border-radius: 20px ;
+	  position:absolute;
+	  top: 35%;
+	  left: 48%;
+	  transform: translate(-50%,-50%);
+	  text-align:center;
+	  font-family:"Open Sans",sans-serif;
+	  font-size: 15px;
+	  filter: drop-shadow(20px 20px 5px  #384140);
+	  padding: 10px;
+	  width:60%;
+	  word-wrap: break-word;
+	  margin-bottom: 40px ;
+	  margin-top: 60px ;
+	} 
+	.Image1{
+        margin-top: 9%;
+        width:50%;
+        height: 100%;
+    }
+    .Image2{
+        margin-top: 0%;
+        width:50%;
+        height: 100%;
+        margin-left: 50%;
+        margin-top: 5%;
+  	}
+}
+  
+  @media screen and (max-width:600px){
+	.boxText{
+	  background-size: 100%;
+	  border-radius: 20px ;
+	  position:absolute;
+	  top: 35%;
+	  left: 48%;
+	  transform: translate(-50%,-50%);
+	  text-align:center;
+	  font-family:"Open Sans",sans-serif;
+	  font-size: 15px;
+	  filter: drop-shadow(20px 20px 5px  #384140);
+	  padding: 10px;
+	  width:80%;
+	  word-wrap: break-word;
+	  margin-bottom: 40px ;
+	  margin-top: 60px ;
+	}
+	.Image1{
+        margin-top: 20%;
+        width:100%;
+        height: 100%; 
+    }
+    .Image2{
+        width:100%;
+        height: 100%;
+        margin-left: 0%;
+        margin-top: 5%;
+    }
+  }

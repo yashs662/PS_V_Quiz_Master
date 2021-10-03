@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2021 at 08:01 PM
+-- Generation Time: Oct 03, 2021 at 08:36 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -47,7 +47,9 @@ CREATE TABLE `multiple_choices` (
 --
 
 INSERT INTO `multiple_choices` (`id`, `question`, `ans1`, `ans2`, `ans3`, `ans4`, `correct_ans1`, `correct_ans2`, `correct_ans3`, `correct_ans4`, `difficulty`, `onhold`) VALUES
-(67602, 'This is a multiple choice question. choose 2 and 4', '1', '2', '3', '4', 0, 1, 0, 1, 'easy', 0);
+(67602, 'This is a multiple choice question. choose 2 and 4', '1', '2', '3', '4', 0, 1, 0, 1, 'easy', 0),
+(67603, 'This is a multiple choice question. choose 1 and 2', '1', '2', '3', '4', 1, 1, 0, 0, 'medium', 0),
+(67604, 'This is a multiple choice question. choose 1 and 3', '1', '2', '3', '4', 1, 0, 1, 0, 'hard', 0);
 
 -- --------------------------------------------------------
 
@@ -75,7 +77,9 @@ INSERT INTO `one_choice` (`id`, `question`, `ans1`, `ans2`, `ans3`, `ans4`, `cor
 (182, 'What does CSS stand for?', 'Common Style Sheet', 'Colorful Style Sheet', 'Computer Style Sheet', 'Cascading Style Sheet', 'Cascading Style Sheet', 'easy', 0),
 (183, 'What does PHP stand for?', 'Hypertext Preprocessor', 'Hypertext Programming', 'Hypertext Preprogramming', 'Hometext Preprocessor', 'Hypertext Preprocessor', 'easy', 0),
 (184, 'What does SQL stand for?', 'Statement Question Language', 'Stylesheet Query Language', 'Structured Query Language', 'Stylish Question Language', 'Structured Query Language', 'easy', 0),
-(185, 'What does XML stand for?', 'eXecutable Multiple Language', 'eXtensible Markup Language', 'eXamine Multiple Language', 'eXTra Multi-Program Language', 'eXtensible Markup Language', 'easy', 0);
+(185, 'What does XML stand for?', 'eXecutable Multiple Language', 'eXtensible Markup Language', 'eXamine Multiple Language', 'eXTra Multi-Program Language', 'eXtensible Markup Language', 'easy', 0),
+(189, 'This is a single chioce question', 'no', 'no', 'yes', 'no', 'yes', 'medium', 0),
+(190, 'This is a single chioce question', 'yes', 'no', 'no', 'no', 'yes', 'hard', 0);
 
 -- --------------------------------------------------------
 
@@ -96,7 +100,9 @@ CREATE TABLE `text_completion` (
 --
 
 INSERT INTO `text_completion` (`id`, `question`, `answer`, `difficulty`, `onhold`) VALUES
-(18, 'This is a text question input hello in the answer. your answer is?', 'hello', 'easy', 0);
+(18, 'This is a text question input hello in the answer. your answer is?', 'hello', 'easy', 0),
+(19, 'This is a text question input yes in the answer. your answer is?', 'yes', 'medium', 0),
+(20, 'This is a text question input lol in the answer. your answer is?', 'lol', 'hard', 0);
 
 -- --------------------------------------------------------
 
@@ -118,7 +124,11 @@ CREATE TABLE `true_false` (
 
 INSERT INTO `true_false` (`id`, `question`, `answer`, `difficulty`, `onhold`) VALUES
 (20, 'This is a true or false question. the answer is true', 1, 'easy', 0),
-(21, 'This is a true or false question. the answer is false', 0, 'easy', 0);
+(21, 'This is a true or false question. the answer is false', 0, 'easy', 0),
+(23, 'This is a true or false question. the answer is true', 1, 'medium', 0),
+(24, 'This is a true or false question. the answer is false', 0, 'medium', 0),
+(25, 'This is a true or false question. the answer is true', 1, 'hard', 0),
+(27, 'This is a true or false question. the answer is false', 0, 'hard', 0);
 
 -- --------------------------------------------------------
 
@@ -144,8 +154,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `lastname`, `date`, `sex`, `username`, `password`, `email`, `photo`, `role`) VALUES
-(74, 'Yash Sharma', 'Sharma', '2001-08-07', 'male', 'yashs662', '12345', 'yashs662@gmail.com', '../media/yash_pfp.jpg', 'admin'),
-(75, 'Yash Sharma', 'Sharma', '2021-09-06', 'female', 'yash', '12345', 'yashs662@gmail.com', '../media/Default-user.png', 'user');
+(74, 'Yash Sharma', 'Sharma', '2001-08-07', 'male', 'yashs662', '12345', 'yashs662@gmail.com', '../media/yashs662-pfp.jpg', 'admin'),
+(75, 'Yash Sharma', 'Sharma', '2021-09-06', 'female', 'yash', '12345', 'yashs662@gmail.com', '../media/Default-user.png', 'user'),
+(76, 'test', 'test', '2021-10-03', 'female', 'test', 'test', 'test@test.com', '../media/Default-user.png', 'user');
 
 -- --------------------------------------------------------
 
@@ -218,31 +229,31 @@ ALTER TABLE `users_history`
 -- AUTO_INCREMENT for table `multiple_choices`
 --
 ALTER TABLE `multiple_choices`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67603;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67605;
 
 --
 -- AUTO_INCREMENT for table `one_choice`
 --
 ALTER TABLE `one_choice`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=189;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=191;
 
 --
 -- AUTO_INCREMENT for table `text_completion`
 --
 ALTER TABLE `text_completion`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `true_false`
 --
 ALTER TABLE `true_false`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT for table `users_history`
